@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'odachiregular';
+    src: url('fonts/webfontkit-20230321-232811/odachi-webfont.woff2') format('woff2'),
+         url('fonts/webfontkit-20230321-232811/odachi-webfont.woff') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+
+}
+
+:root{
+    background-image: url(images/camille-brodard-kOAU9SG0VX8-unsplash.jpg);
+    background-size: 1920px 1080px;
+
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.form{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 960px;
+}
+
+.top{
+    font-size: 40px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.bottom{
+    font-size: large;
+    padding: 50px;
+}
+
+form{
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 50px;
+    box-shadow: 0px 10px 13px 0px grey;
+}
+
+.row1, .row2, .row3{
+    display: flex;
+    gap: 100px;
+}
+
+.titleandlogo{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+    font-family: 'odachiregular';
+    font-size: 5rem;
+    align-items: center;
+}
+
+.logocontainer{
+    background-color: white;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+label{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    font-size: large;
+}
+
+button{
+    background-color: #5A4434ff;
+    border: #5A4434ff solid;
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 5px 0px grey;
+}
+
+
+a{
+    color: #6F5E52ff;
+}
+
+.focusChecker:focus{
+    outline: none;
+    border: solid #5A4434ff;
+    border-radius: 5px;
+}
+
+.validChecker:invalid{
+    outline: none;
+    border: solid red;
+    border-radius: 5px;
+}
+
+.validChecker:valid{
+    outline: none;
+    border: solid green;
+    border-radius: 5px;
+}
+
+.validInfo{
+    font-size: 13px;
+    color: red;
+}

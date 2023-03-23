@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="./code.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Sign up</title>
+</head>
+<body>
+    <div class="titleandlogo">
+        <div class="logocontainer">
+            <img class="logo" src="images/booklogo.png" alt="Book logo">
+            Book<br>Club
+        </div>
+    </div>
+    <div class="form">
+        <div class="top">
+            Join the best book club in town! Access the best novels and educational books! All free-of-charge!
+            Sign up now. You know you <em>want</em> to~
+        </div>
+        <form action="#" method="post">
+                Let's do this! <br>
+                <div class="row1">
+                    <label for="firstName" class="firstName">*FIRST NAME<br>
+                    <input minlength="2" type="text" name="firstName" id="firstName" required>
+                    </label>
+                    <label for="secondName" class="secondName">*SECOND NAME <br>
+                        <input minlength="2" type="text" name="secondName" id="secondName" required>
+                    </label>
+                </div>
+                <div class="row2">
+                    <label for="email" class = "email">*EMAIL<br>
+                        <input type="email" name="enamil" id="email" required>
+                    </label>
+                    <label for="tel" class="tel">PHONE NUMBER<br>
+                        <input  type="tel" name="tel" id="tel" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$">
+                    </label>
+                </div>
+                <div class="row3">
+                    <label for="pass" class="password">*PASSWORD <br>
+                        <input minlength="6" type="password" name="pass" id="pass" required> <br>
+                    </label>
+                    <label for="pass-confirm">*CONFIRM PASSWORD <br>
+                        <input type="password" name="pass-confirm" id="pass-confirm">
+                    </label>
+                </div>
+            </form>
+        <div class="bottom">
+            <button type="submit">Join The Club</button><br>
+            Already part of the club? <a href="#">Log in</a>
+        </div>
+    </div>
+</body>
+</html>
