@@ -8,11 +8,12 @@ const emailField = document.querySelector(".email");
 const firstNameField = document.querySelector(".firstName");
 const secondNameField = document.querySelector(".secondName");
 const telField = document.querySelector(".tel");
+const passwordConfirmField = document.querySelector(".passwordConfirm")
 
 
 inputs.forEach((item) => item.classList.add("focusChecker"));
 
-inputs.forEach((item) => item.addEventListener('keypress', (e) => {
+inputs.forEach((item) => item.addEventListener('keyup', (e) => {
     setTimeout(() => { 
         item.classList.add("validChecker");
         item.classList.remove("focusChecker");
@@ -42,7 +43,18 @@ inputs.forEach((item) => item.addEventListener('keypress', (e) => {
 
 
         }
-    }, 3000);
+    }, 2000);
+    if (e.target.id == "pass-confirm") {
+        if (passwordInput != e.target.value) {
+            e.target.setCustomValidity("Invalid Field");
+            validInfo.textContent = "Must be same as password";
+            passwordConfirmField.appendChild(validInfo);
+            console.log("Not the same");
+        }
+        else{
+            e.target.setCustomValidity("");
+        }
+    }
     if (e.target.checkValidity() == true) {
         validInfo.remove();
     }
